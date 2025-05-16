@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController {
 
     private final UserService userService;
@@ -25,6 +25,7 @@ public class UserController {
         this.userRepository = userRepository;
         this.cloudinaryService = cloudinaryService;
     }
+
 
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
